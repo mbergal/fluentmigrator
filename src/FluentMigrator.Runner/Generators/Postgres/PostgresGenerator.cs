@@ -192,7 +192,7 @@ namespace FluentMigrator.Runner.Generators.Postgres
 
         public override string Generate(DeleteDefaultConstraintExpression expression)
         {
-            return compatabilityMode.HandleCompatabilty("Default constraints are not supported");
+            return compatabilityMode.HandleCompatibilty("Default constraints are not supported");
         }
 
         protected string GetColumnList(IEnumerable<string> columns)

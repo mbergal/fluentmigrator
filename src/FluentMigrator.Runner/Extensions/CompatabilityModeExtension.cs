@@ -2,7 +2,7 @@
 {
     public static class CompatabilityModeExtension
     {
-        public static string HandleCompatabilty(this CompatabilityMode mode, string message)
+        public static string HandleCompatibilty(this CompatabilityMode mode, string message)
         {
             if (CompatabilityMode.STRICT == mode)
             {

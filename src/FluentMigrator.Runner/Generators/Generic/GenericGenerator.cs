@@ -234,7 +234,7 @@ namespace FluentMigrator.Runner.Generators.Generic
                     string errorMessage =
                         string.Format("The following database specific additional features are not supported in strict mode [{0}]",
                                       expression.AdditionalFeatures.Keys.Aggregate((x, y) => x + ", " + y));
-                    return compatabilityMode.HandleCompatabilty(errorMessage);
+                    return compatabilityMode.HandleCompatibilty(errorMessage);
                 }
             }
 
@@ -308,18 +308,18 @@ namespace FluentMigrator.Runner.Generators.Generic
         //All Schema method throw by default as only Sql server 2005 and up supports them.
         public override string Generate(CreateSchemaExpression expression)
         {
-            return compatabilityMode.HandleCompatabilty("Schemas are not supported");
+            return compatabilityMode.HandleCompatibilty("Schemas are not supported");
 
         }
 
         public override string Generate(DeleteSchemaExpression expression)
         {
-            return compatabilityMode.HandleCompatabilty("Schemas are not supported");
+            return compatabilityMode.HandleCompatibilty("Schemas are not supported");
         }
 
         public override string Generate(AlterSchemaExpression expression)
         {
-            return compatabilityMode.HandleCompatabilty("Schemas are not supported");
+            return compatabilityMode.HandleCompatibilty("Schemas are not supported");
         }
 
         public override string Generate(CreateSequenceExpression expression)
